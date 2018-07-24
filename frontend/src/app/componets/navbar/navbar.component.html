@@ -6,18 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ml-auto">
           <ul class="navbar-nav">
-              <li id="quienesSomosLi" class="nav-item active">
-                  <a class="nav-link" href="#quienesSomos">Quiénes Somos</a>
+              <li routerLinkActive="active" class="nav-item">
+                  <a class="nav-link" [routerLink]="['/login']">LOGIN</a>
               </li>
-              <li id="serviciosLi" class="nav-item">
-                  <a class="nav-link" href="#servicios">Servicios</a>
-              </li>
-              <li id="contactanosLi" class="nav-item">
-                  <a class="nav-link" href="#contactanos">Contáctanos</a>
-              </li>
-              <li id="redsocialLi" class="nav-item">
-                  <a class="nav-link" href="#redesSociales">Redes Sociales</a>
-              </li>
+              <li routerLinkActive="active" class="nav-item">
+                  <a class="nav-link" [routerLink]="['/profile']">PROFILE</a>
+              </li>              
           </ul>
       </div>
   </div>               
