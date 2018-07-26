@@ -1,3 +1,52 @@
-<div class="pt-5">
-  <h1 class="display-1">signup works!</h1>
+<div class="row pt-5">
+    <div class="pt-5 col-8 offset-2">
+        <div class="card">
+            <div class="card-header">
+                <h5>Crear una cuenta</h5>
+            </div>
+            <div class="card-body">
+                <form  (ngSubmit)="onSubmit()"  #signupForm="ngForm">
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="name">Nombre</label>
+                            <input type="text" [(ngModel)]="form.name" name="name" class="form-control" id="name" placeholder="example@example.com" required>
+                            <div class="alert alert-danger" [hidden]="!error.name">
+                                {{ error.name }}
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="email">Email</label>
+                            <input type="email" [(ngModel)]="form.email" name="email" class="form-control" id="email" placeholder="example@example.com" required>
+                            <div class="alert alert-danger" [hidden]="!error.email">
+                                {{ error.email }}
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="password">Contraseña</label>
+                            <input type="password" [(ngModel)]="form.password"  name="password" class="form-control" id="password" placeholder="Contraseña" required>
+                            <div class="alert alert-danger" [hidden]="!error.password">
+                                {{ error.password }}
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="password_confirm">Confirmar contraseña</label>
+                            <input type="password" [(ngModel)]="form.password_confirmation"  name="password_confirmation" class="form-control" id="password_confirm" placeholder="Confirmar contraseña" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">Crear cuenta</button>
+                            <a [routerLink]="['/login']" class="nav-link float-right">Prefiero iniciar sesión</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
 </div>

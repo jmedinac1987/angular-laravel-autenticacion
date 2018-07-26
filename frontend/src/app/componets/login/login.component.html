@@ -1,3 +1,37 @@
-<div class="pt-5">
- <h1 class="display-1">login works!</h1> 
+<div class="row pt-5">
+    <div class="pt-5 col-8 offset-2">
+        <div class="card">
+            <div class="card-header">
+                <h5>Login</h5>
+            </div>
+            <div class="card-body">
+                <form  (ngSubmit)="onSubmit()"  #loginForm="ngForm">
+                    <div class="alert alert-danger" [hidden]="!error">
+                        {{ error }}
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="email">Email</label>
+                            <input type="email" [(ngModel)]="form.email" name="email" class="form-control" id="email" placeholder="example@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">                        
+                        <div class="col-sm-12">
+                            <label for="password">Contraseña</label>
+                            <input type="password" [(ngModel)]="form.password"  name="password" class="form-control" id="email" placeholder="Contraseña" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Iniciar sesión</button>
+                            <a [routerLink]="['/signup']" class="btn btn-info float-right">Crear cuenta</a>
+                        </div>
+                    </div>
+                    <small>
+                        <a [routerLink]="['/request-password-reset']" class="nav-link float-right">Olvidaste tu contraseña</a>
+                    </small>
+                </form>
+            </div>
+        </div>
+    </div>    
 </div>
