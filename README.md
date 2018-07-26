@@ -9,7 +9,7 @@ El proyecto combina la versión de Angular CLI 6.0 y Laravel 5.5, con el ánimo 
 * JWT
 * ng-Snotify
 
-## Como iniciar ejecutar el proyecto
+## Como ejecutar el proyecto
 
 Después de clonar el proyecto, deberás seguir los siguientes pasos:
 
